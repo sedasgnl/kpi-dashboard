@@ -1,11 +1,20 @@
-<html>
-<body style="background:#0f172a;color:white;font-family:Arial;text-align:center;margin-top:50px;">
+<script>
+function update() {
+  let current = Math.random();
+  let previous = Math.random();
 
-<div style="font-size:40px;">2.4 sn</div>
+  if (current > previous) {
+    document.getElementById("triangle").innerHTML = "▲";
+    document.getElementById("triangle").style.color = "#00ff88"; // yeşil
+  } else {
+    document.getElementById("triangle").innerHTML = "▼";
+    document.getElementById("triangle").style.color = "red";
+  }
+}
 
-<div style="color:#00ff88;font-size:20px;">
-▲ %6 Artış
-</div>
+update();
+setInterval(update, 3000);
+</script>
 
 </body>
 </html>
